@@ -15,105 +15,141 @@
             background-color: #f9f9f9;
         }
         header {
-            background: linear-gradient(to right, #1a3c5e, #2a5c8e);
+            background: linear-gradient(to right, #006600, #ff4500); /* Green to Orange */
             color: white;
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 4rem 1rem;
+            position: relative;
         }
         header img {
-            max-width: 200px;
+            max-width: 250px;
             margin-bottom: 1rem;
         }
         header h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin: 0;
+            font-weight: bold;
         }
         header p {
-            font-size: 1.3rem;
-            max-width: 600px;
+            font-size: 1.5rem;
+            max-width: 700px;
             margin: 1rem auto;
         }
         .cta-button {
             display: inline-block;
-            background-color: #e67e22;
+            background-color: #ff4500; /* Orange */
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             transition: background-color 0.3s;
         }
         .cta-button:hover {
-            background-color: #d35400;
+            background-color: #cc3700; /* Darker Orange */
         }
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 3rem 1rem;
         }
         .section {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
         .section h2 {
-            color: #1a3c5e;
-            font-size: 2rem;
+            color: #006600; /* Green */
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .value-prop, .testimonials {
+            background-color: #fff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .value-prop ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .value-prop ul li {
             margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .value-prop ul li::before {
+            content: "✔ ";
+            color: #ff4500; /* Orange */
+        }
+        .testimonials p {
+            font-style: italic;
+            color: #555;
+            font-size: 1.1rem;
+        }
+        .testimonials p strong {
+            color: #006600; /* Green */
         }
         .form-section {
             background-color: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
             max-width: 600px;
             margin: 0 auto;
         }
         .form-section input,
         .form-section textarea {
             width: 100%;
-            padding: 0.8rem;
-            margin: 0.5rem 0;
+            padding: 1rem;
+            margin: 0.8rem 0;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
         .form-section button {
-            background-color: #e67e22;
+            background-color: #ff4500; /* Orange */
             color: white;
             border: none;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             border-radius: 5px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             cursor: pointer;
             transition: background-color 0.3s;
         }
         .form-section button:hover {
-            background-color: #d35400;
+            background-color: #cc3700; /* Darker Orange */
         }
         footer {
-            background-color: #1a3c5e;
+            background-color: #006600; /* Green */
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
         }
         footer a {
-            color: #e67e22;
+            color: #ff4500; /* Orange */
             text-decoration: none;
         }
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             header p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             header img {
-                max-width: 150px;
+                max-width: 180px;
+            }
+            .section h2 {
+                font-size: 2rem;
             }
             .container {
-                padding: 1rem;
+                padding: 1.5rem;
             }
         }
     </style>
@@ -121,22 +157,33 @@
 <body>
     <header>
         <img src="logo.png" alt="EMaymar Logo">
-        <h1>Grow Your Construction Business with EMaymar?</h1>
+        <h1>Grow Your Construction Business with EMaymar</h1>
         <p>Get 8 High-Quality Leads Per Month in Multan, or You Don’t Pay!</p>
         <a href="#contact" class="cta-button">Claim Your Leads Now</a>
     </header>
     <div class="container">
-        <div class="section">
-            <h2>Why Builders in Multan Choose EMaymar</h2>
-            <p>We understand the challenges you face: inconsistent lead flow, building a strong brand, and managing your online reputation. Our targeted social media campaigns deliver high-quality leads from clients in Multan, Punjab, ready to hire for construction and renovation projects.</p>
+        <div class="section value-prop">
+            <h2>Why EMaymar is Your Growth Partner</h2>
+            <p>We tackle your biggest challenges: inconsistent lead flow, weak branding, and online reputation management. Our targeted social media campaigns deliver high-quality leads from Multan, Punjab, clients ready for construction and renovation projects.</p>
+            <ul>
+                <li>Guaranteed 8 qualified leads per month or no payment.</li>
+                <li>Localized strategies for Multan’s construction market.</li>
+                <li>Save time with our lead generation expertise.</li>
+                <li>Boost your brand with professional support.</li>
+            </ul>
+        </div>
+        <div class="section testimonials">
+            <h2>What Our Clients Say</h2>
+            <p>"EMaymar transformed our lead flow! We got 8 solid clients in the first month." – <strong>Ali Khan, Multan Builder</strong></p>
+            <p>"Finally, a service that understands our needs in Punjab. Highly recommend!" – <strong>Sara Ahmed, Contractor</strong></p>
         </div>
         <div class="section form-section" id="contact">
-            <h2>Contact Us to Start Growing</h2>
+            <h2>Contact EMaymar to Start Growing</h2>
             <form action="mailto:contact@emaymar.com" method="post" enctype="text/plain">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="tel" name="phone" placeholder="Your Phone Number" required>
-                <textarea name="message" placeholder="Tell us about your business" rows="5" required></textarea>
+                <textarea name="message" placeholder="Tell us about your construction needs" rows="5" required></textarea>
                 <button type="submit">Get Your 8 Leads</button>
             </form>
         </div>
