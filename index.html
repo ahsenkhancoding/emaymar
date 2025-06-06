@@ -7,7 +7,7 @@
     <title>EMaymar - High-Quality Leads for Builders</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Times New Roman', serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
@@ -15,29 +15,57 @@
             background-color: #f9f9f9;
         }
         header {
-            background: linear-gradient(to right, #006600, #ff4500); /* Green to Orange */
+            background: linear-gradient(to right, #006600, #ff4500);
             color: white;
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 2rem 1rem;
             position: relative;
         }
         header img {
-            max-width: 250px;
-            margin-bottom: 1rem;
+            max-width: 350px;
+            margin-bottom: 1.5rem;
         }
         header h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin: 0;
             font-weight: bold;
         }
         header p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             max-width: 700px;
             margin: 1rem auto;
         }
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 6rem 1rem;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+        }
         .cta-button {
             display: inline-block;
-            background-color: #ff4500; /* Orange */
+            background-color: #ff4500;
             color: white;
             padding: 1.2rem 2.5rem;
             text-decoration: none;
@@ -46,9 +74,11 @@
             font-weight: bold;
             margin-top: 1.5rem;
             transition: background-color 0.3s;
+            position: relative;
+            z-index: 1;
         }
         .cta-button:hover {
-            background-color: #cc3700; /* Darker Orange */
+            background-color: #cc3700;
         }
         .container {
             max-width: 1100px;
@@ -60,9 +90,43 @@
             margin-bottom: 4rem;
         }
         .section h2 {
-            color: #006600; /* Green */
+            color: #006600;
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
+        }
+        .who-we-are p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+        .process-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .process-item {
+            flex: 1;
+            min-width: 300px;
+            margin: 1rem;
+            text-align: left;
+        }
+        .process-item h3 {
+            color: #ff4500;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .process-item h3 span {
+            display: inline-block;
+            background-color: #ff4500;
+            color: white;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            text-align: center;
+            line-height: 2rem;
+            margin-right: 0.5rem;
         }
         .value-prop, .testimonials {
             background-color: #fff;
@@ -85,7 +149,7 @@
         }
         .value-prop ul li::before {
             content: "✔ ";
-            color: #ff4500; /* Orange */
+            color: #ff4500;
         }
         .testimonials p {
             font-style: italic;
@@ -93,7 +157,7 @@
             font-size: 1.1rem;
         }
         .testimonials p strong {
-            color: #006600; /* Green */
+            color: #006600;
         }
         .form-section {
             background-color: #fff;
@@ -113,7 +177,7 @@
             font-size: 1.1rem;
         }
         .form-section button {
-            background-color: #ff4500; /* Orange */
+            background-color: #ff4500;
             color: white;
             border: none;
             padding: 1.2rem 2.5rem;
@@ -123,27 +187,27 @@
             transition: background-color 0.3s;
         }
         .form-section button:hover {
-            background-color: #cc3700; /* Darker Orange */
+            background-color: #cc3700;
         }
         footer {
-            background-color: #006600; /* Green */
+            background-color: #006600;
             color: white;
             text-align: center;
             padding: 1.5rem;
         }
         footer a {
-            color: #ff4500; /* Orange */
+            color: #ff4500;
             text-decoration: none;
         }
         @media (max-width: 768px) {
-            header h1 {
+            header h1, .hero h1 {
                 font-size: 2.2rem;
             }
-            header p {
+            header p, .hero p {
                 font-size: 1.1rem;
             }
             header img {
-                max-width: 180px;
+                max-width: 250px;
             }
             .section h2 {
                 font-size: 2rem;
@@ -151,36 +215,61 @@
             .container {
                 padding: 1.5rem;
             }
+            .process-item {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <img src="logo.png" alt="EMaymar Logo">
-        <h1>Grow Your Construction Business with EMaymar</h1>
-        <p>Get 8 High-Quality Leads Per Month, or You Don’t Pay!</p>
-        <a href="#contact" class="cta-button">Claim Your Leads Now</a>
     </header>
+    <div class="hero">
+        <h1>We Generate Quote-Ready Construction Leads for You</h1>
+        <p>No Heavy Lifting Required!</p>
+        <a href="#contact" class="cta-button">Get More Leads</a>
+    </div>
     <div class="container">
+        <div class="section who-we-are">
+            <h2>Who Are We?</h2>
+            <p>We’re a Multan-based agency that helps construction companies by delivering top-tier, quote-ready leads through strategic advertising on popular social media sites. Our targeted approach not only frees you up to focus on your work but also ensures your growth is driven by genuinely interested clients, making your business growth smooth and efficient.</p>
+        </div>
+        <div class="section">
+            <h2>Our Process</h2>
+            <div class="process-grid">
+                <div class="process-item">
+                    <h3><span>1</span>Gather Content</h3>
+                    <p>In the initial step, we collect information that highlights your construction expertise. These form the foundation of our strategy, serving to attract a greater number of potential clients to your business.</p>
+                </div>
+                <div class="process-item">
+                    <h3><span>2</span>Launch Ads</h3>
+                    <p>Next, we launch ads based on the content we’ve collected. These ads are strategically designed and placed on popular social media platforms to capture interested clients.</p>
+                </div>
+                <div class="process-item">
+                    <h3><span>3</span>Generate Leads</h3>
+                    <p>Finally, we collect information from individuals who are genuinely interested in your services. Prioritizing quote-ready leads and eliminating time wasters.</p>
+                </div>
+            </div>
+        </div>
         <div class="section value-prop">
-            <h2>Why Consider EMaymar as Your Growth Partner</h2>
-            <p>We tackle your biggest challenges: inconsistent lead flow, weak branding, and online reputation management. Our targeted social media campaigns deliver high-quality leads from clients ready for construction and renovation projects.</p>
+            <h2>Why EMaymar is Your Growth Partner</h2>
+            <p>We tackle your biggest challenges: inconsistent lead flow, weak branding, and online reputation management. Our targeted social media campaigns deliver high-quality leads from Multan, Punjab, clients ready for construction and renovation projects.</p>
             <ul>
-                <li>Guaranteed 8 qualified leads per month or no payment.</li>
-                <li>Localized Social Media Strategies for Your Business.</li>
-                <li>Save Time with our lead generation expertise.</li>
-                <li>Boost your brand with professional support.</li>
+                <li>Guaranteed 8 Qualified Leads per Month or No Payment.</li>
+                <li>Localized Strategies for Your Business Growth.</li>
+                <li>Save Time with our Lead Generation Expertise.</li>
+                <li>Boost Your Brand with Professional Support.</li>
             </ul>
         </div>
         <div class="section testimonials">
             <h2>What Our Clients Say</h2>
-            <p>"EMaymar transformed our lead flow! We got 2 solid clients in the first month." – <strong>Ali Khan, Multan Builder</strong></p>
-            <p>"Finally, a service that helped my struggling business with inconsistent workflow. Highly recommend!" – <strong>Sara Ahmed, Contractor</strong></p>
+            <p>"EMaymar transformed our lead flow! We got 8 solid clients in the first month." – <strong>Ali Khan, Multan Builder</strong></p>
+            <p>"Finally, a Professional Service that understands construction business needs. Highly recommend!" – <strong>Sara Ahmed, Contractor</strong></p>
         </div>
         <div class="section form-section" id="contact">
-            <h2>Contact Now! and get 10 quote ready leads in the first month or simply just don't pay</h2>
-            <h3>Grow with EMaymar Now!</h3>
-            <form action="mailto:contact@emaymar.com" method="post" enctype="text/plain">
+            <h2>Contact EMaymar Now to Start Growing</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="tel" name="phone" placeholder="Your Phone Number" required>
